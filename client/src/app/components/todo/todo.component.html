@@ -1,0 +1,13 @@
+<app-add-todo (onAddTodo)="addTodo($event)"></app-add-todo>
+<app-button *ngIf="hasRoute('/')"
+            color="{{ sortType ? 'green' : 'green'}}"
+            text="{{sortType ? 'ASC' : 'DESC'}}"
+            (btnClick)="toggleSortTodo()"
+></app-button>
+
+<app-todo-item
+  *ngFor="let todo of todoes"
+  [todo]="todo"
+  (onDeleteTodo)="deleteTodo(todo)"
+  (onToggleDone)="toggleDone(todo)"
+  ></app-todo-item>

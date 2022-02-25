@@ -1,0 +1,32 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      name="text"
+      [(ngModel)]="name"
+      id="name"
+      placeholder="Enter your name"
+    />
+  </div>
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input type="text"
+           name="email"
+           [(ngModel)]="email"
+           id="email"
+           placeholder="Enter your email"
+    />
+  </div>
+  <div class="form-control">
+    <label for="password">Password</label>
+    <input type="password"
+           name="password"
+           [(ngModel)]="password"
+           id="password"
+           placeholder="Enter your password"
+    />
+  </div>
+  <input type="submit" value="Register" class="btn btn-block"/>
+</form>
+

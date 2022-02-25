@@ -1,0 +1,16 @@
+<div
+  [ngClass]="{done: todo.done}"
+  class="todo"
+  (dblclick)="onToggle(todo)"
+  >
+  <h3>
+    {{todo.title}}
+    <fa-icon
+      (click)="onDelete(todo)"
+      [ngStyle]="{ color: 'red'}"
+      [icon]="faTimes"
+      ></fa-icon>
+  </h3>
+  <p>{{ todo.description }}</p>
+  <p>{{ todo.creationDate }}</p>
+</div>
